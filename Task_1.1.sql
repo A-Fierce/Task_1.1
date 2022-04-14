@@ -50,3 +50,7 @@ tracks_id integer references tracks(id),
 collections_id integer references collections(id),
 constraint pk_collections primary key (tracks_id, collections_id)
 );
+
+alter table tracks drop column duration;
+
+alter table tracks add column duration numeric;
